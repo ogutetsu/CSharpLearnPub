@@ -1,0 +1,40 @@
+﻿using System;
+using LearnLib;
+using LearnProject.Beginning;
+
+namespace LearnProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ConsoleMenuSelector top = new ConsoleMenuSelector("Top", ConsoleMenuSelector.Selector.Submenu);
+            
+            //Beginningメニューの作成
+            ConsoleMenuSelector beginning = new ConsoleMenuSelector("Beginning", ConsoleMenuSelector.Selector.Runner);
+            beginning.AddMenu(1, new SingleVariable());
+            beginning.AddMenu(2, new Calculation());
+            beginning.AddMenu(3, new Ifelse());
+            beginning.AddMenu(4, new TupleDeconstruction());
+            beginning.AddMenu(5, new PatternMatching());
+            beginning.AddMenu(6, new LocalFunction());
+            beginning.AddMenu(7, new Literal());
+            beginning.AddMenu(8, new DefaultExp());
+            beginning.AddMenu(9, new Property());
+            beginning.AddMenu(10, new FileIO());
+            beginning.AddMenu(11, new Reflection());
+            beginning.AddMenu(12, new DelegateEvent());
+            beginning.AddMenu(13, new Collection());
+            beginning.AddMenu(14, new Generic());
+            beginning.AddMenu(15, new Attributes());
+            beginning.AddMenu(16, new Unsafe());
+            beginning.SetBack();
+            
+            //最後にトップメニューに追加する
+            top.AddMenu(1, beginning);
+            top.SetExit();
+
+            top.Run();
+        }
+    }
+}
