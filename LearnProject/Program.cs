@@ -1,6 +1,7 @@
 ﻿using System;
 using LearnLib;
 using LearnProject.Beginning;
+using LearnProject.Multithread;
 
 namespace LearnProject
 {
@@ -30,8 +31,15 @@ namespace LearnProject
             beginning.AddMenu(16, new Unsafe());
             beginning.SetBack();
             
+            //Multithread用メニュー
+            ConsoleMenuSelector multithread = new ConsoleMenuSelector("Multithread", ConsoleMenuSelector.Selector.Runner);
+            multithread.AddMenu(1, new ThreadPause());
+            multithread.SetBack();
+
+            
             //最後にトップメニューに追加する
             top.AddMenu(1, beginning);
+            top.AddMenu(2, multithread);
             top.SetExit();
 
             top.Run();
