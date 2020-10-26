@@ -35,6 +35,7 @@ namespace LearnProject
             ConsoleMenuSelector multithread = new ConsoleMenuSelector("Multithread", ConsoleMenuSelector.Selector.Runner);
             multithread.AddMenu(1, new ThreadPause());
             multithread.AddMenu(2, new ThreadAbort());
+            multithread.AddMenu(3, new ThreadState());
             multithread.SetBack();
 
             
