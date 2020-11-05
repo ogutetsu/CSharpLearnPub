@@ -38,6 +38,7 @@ namespace LearnProject
             multithread.AddMenu(3, new ThreadState());
             multithread.AddMenu(4, new ThreadPriority());
             multithread.AddMenu(5, new ThreadForegroundBackGround());
+            multithread.AddMenu(6, new ThreadParameters());
 
 
             multithread.SetBack();
