@@ -48,6 +48,7 @@ namespace LearnProject
             multithread.AddMenu(13, new ThreadAutoResetEvent());
             multithread.AddMenu(14, new ThreadManualResetEventSlim());
             multithread.AddMenu(15, new ThreadCountDownEvent());
+            multithread.AddMenu(16, new ThreadBarrier());
 
 
             multithread.SetBack();
