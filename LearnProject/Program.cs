@@ -50,6 +50,7 @@ namespace LearnProject
             multithread.AddMenu(15, new ThreadCountDownEvent());
             multithread.AddMenu(16, new ThreadBarrier());
             multithread.AddMenu(17, new ThreadReaderWriterLockSlim());
+            multithread.AddMenu(18, new ThreadSpinWait());
 
             multithread.SetBack();
 
