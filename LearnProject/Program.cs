@@ -49,7 +49,7 @@ namespace LearnProject
             multithread.AddMenu(14, new ThreadManualResetEventSlim());
             multithread.AddMenu(15, new ThreadCountDownEvent());
             multithread.AddMenu(16, new ThreadBarrier());
-
+            multithread.AddMenu(17, new ThreadReaderWriterLockSlim());
 
             multithread.SetBack();
 
