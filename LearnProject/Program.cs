@@ -2,6 +2,7 @@
 using LearnLib;
 using LearnProject.Beginning;
 using LearnProject.Multithread;
+using LearnProject.Multithread.Pool;
 
 namespace LearnProject
 {
@@ -51,6 +52,7 @@ namespace LearnProject
             multithread.AddMenu(16, new ThreadBarrier());
             multithread.AddMenu(17, new ThreadReaderWriterLockSlim());
             multithread.AddMenu(18, new ThreadSpinWait());
+            multithread.AddMenu(19, new ThreadPoolDelegate());
 
             multithread.SetBack();
 
