@@ -58,6 +58,7 @@ namespace LearnProject
             multithread.AddMenu(22, new ThreadPoolCancel());
             multithread.AddMenu(23, new ThreadPoolWaitHandleAndTimeout());
             multithread.AddMenu(24, new ThreadPoolTimer());
+            multithread.AddMenu(25, new ThreadPoolBackGroundWorker());
             
             multithread.SetBack();
 
