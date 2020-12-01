@@ -3,6 +3,7 @@ using LearnLib;
 using LearnProject.Beginning;
 using LearnProject.Multithread;
 using LearnProject.Multithread.Pool;
+using LearnProject.Multithread.Task;
 
 namespace LearnProject
 {
@@ -59,6 +60,8 @@ namespace LearnProject
             multithread.AddMenu(23, new ThreadPoolWaitHandleAndTimeout());
             multithread.AddMenu(24, new ThreadPoolTimer());
             multithread.AddMenu(25, new ThreadPoolBackGroundWorker());
+            multithread.AddMenu(26, new TaskCreate());
+            multithread.AddMenu(27, new TaskBasicOperation());
             
             multithread.SetBack();
 
