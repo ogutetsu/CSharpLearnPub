@@ -66,6 +66,7 @@ namespace LearnProject
             multithread.AddMenu(29, new TaskAPMPattern());
             multithread.AddMenu(30, new TaskEAPPattern());
             multithread.AddMenu(31, new TaskCancelOption());
+            multithread.AddMenu(32, new TaskException());
             
             multithread.SetBack();
 
