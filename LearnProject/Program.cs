@@ -4,6 +4,7 @@ using LearnProject.Beginning;
 using LearnProject.Multithread;
 using LearnProject.Multithread.Pool;
 using LearnProject.Multithread.Task;
+using LearnProject.Multithread.Version6;
 
 namespace LearnProject
 {
@@ -68,6 +69,7 @@ namespace LearnProject
             multithread.AddMenu(31, new TaskCancelOption());
             multithread.AddMenu(32, new TaskException());
             multithread.AddMenu(33, new TaskParallel());
+            multithread.AddMenu(34, new AwaitResult());
             
             multithread.SetBack();
 
