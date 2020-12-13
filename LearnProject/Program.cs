@@ -2,6 +2,7 @@
 using LearnLib;
 using LearnProject.Beginning;
 using LearnProject.Multithread;
+using LearnProject.Multithread.Collection;
 using LearnProject.Multithread.Pool;
 using LearnProject.Multithread.Task;
 using LearnProject.Multithread.Version6;
@@ -76,6 +77,7 @@ namespace LearnProject
             multithread.AddMenu(38, new AwaitException());
             multithread.AddMenu(39, new AsyncVoid());
             multithread.AddMenu(40, new AwaitCustomType());
+            multithread.AddMenu(41, new ConcurrentDictionary());
             
             multithread.SetBack();
 
