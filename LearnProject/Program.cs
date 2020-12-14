@@ -78,6 +78,7 @@ namespace LearnProject
             multithread.AddMenu(39, new AsyncVoid());
             multithread.AddMenu(40, new AwaitCustomType());
             multithread.AddMenu(41, new ConcurrentDictionary());
+            multithread.AddMenu(42, new ConcurrentQueue());
             
             multithread.SetBack();
 
