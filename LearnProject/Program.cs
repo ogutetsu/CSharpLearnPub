@@ -3,6 +3,7 @@ using LearnLib;
 using LearnProject.Beginning;
 using LearnProject.Multithread;
 using LearnProject.Multithread.Collection;
+using LearnProject.Multithread.PLINQ;
 using LearnProject.Multithread.Pool;
 using LearnProject.Multithread.Task;
 using LearnProject.Multithread.Version6;
@@ -82,6 +83,7 @@ namespace LearnProject
             multithread.AddMenu(43, new ConcurrentStack());
             multithread.AddMenu(44, new ConcurrentBag());
             multithread.AddMenu(45, new BlockingCollection());
+            multithread.AddMenu(46, new UsingParallel());
 
             multithread.SetBack();
 
