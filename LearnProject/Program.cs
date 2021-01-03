@@ -87,6 +87,7 @@ namespace LearnProject
             multithread.AddMenu(47, new ParallelLINQ());
             multithread.AddMenu(48, new ParametersPLINQ());
             multithread.AddMenu(49, new ExceptionsPLINQ());
+            multithread.AddMenu(50, new DataPartitioningPLINQ());
 
             multithread.SetBack();
 
