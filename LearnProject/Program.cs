@@ -84,6 +84,7 @@ namespace LearnProject
             multithread.AddMenu(44, new ConcurrentBag());
             multithread.AddMenu(45, new BlockingCollection());
             multithread.AddMenu(46, new UsingParallel());
+            multithread.AddMenu(47, new ParallelLINQ());
 
             multithread.SetBack();
 
