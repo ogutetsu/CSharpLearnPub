@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using System.Threading.Tasks;
 using LearnLib;
 
 namespace LearnProject.Multithread.Version6
 {
 	public class AwaitCustomType : ConsoleMenu
 	{
-		async System.Threading.Tasks.Task AsyncProcess()
+		async Task AsyncProcess()
 		{
 			var sync = new CustomAwaitable(true);
 			string result = await sync;
@@ -72,7 +73,7 @@ namespace LearnProject.Multithread.Version6
 		
 		public override void Run()
 		{
-			System.Threading.Tasks.Task t = AsyncProcess();
+			Task t = AsyncProcess();
 			t.Wait();
 		}
 	}

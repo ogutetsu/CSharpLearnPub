@@ -7,7 +7,7 @@ namespace LearnProject.Multithread.Version6
 {
 	public class AwaitException : ConsoleMenu
 	{
-		async System.Threading.Tasks.Task AsyncProcess()
+		async Task AsyncProcess()
 		{
 			Console.WriteLine($"Single exception");
 
@@ -69,12 +69,12 @@ namespace LearnProject.Multithread.Version6
 			}
 			catch (Exception e)
 			{
-				await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
+				await Task.Delay(TimeSpan.FromSeconds(1));
 				Console.WriteLine($"Catch await : {e}");
 			}
 			finally
 			{
-				await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(2));
+				await Task.Delay(TimeSpan.FromSeconds(2));
 				Console.WriteLine($"Finally");
 			}
 

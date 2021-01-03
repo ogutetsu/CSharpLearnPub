@@ -7,11 +7,11 @@ namespace LearnProject.Multithread.Version6
 {
 	public class AwaitLambda : ConsoleMenu
 	{
-		async System.Threading.Tasks.Task AsyncProcess()
+		async Task AsyncProcess()
 		{
 			Func<string, Task<string>> lambda = async name =>
 			{
-				await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(2));
+				await Task.Delay(TimeSpan.FromSeconds(2));
 				return
 					$"Task {name} thread id {Thread.CurrentThread.ManagedThreadId} thread pool {Thread.CurrentThread.IsThreadPoolThread}";
 			};
@@ -20,7 +20,7 @@ namespace LearnProject.Multithread.Version6
 		}
 		public override void Run()
 		{
-			System.Threading.Tasks.Task t = AsyncProcess();
+			Task t = AsyncProcess();
 			t.Wait();
 		}
 	}

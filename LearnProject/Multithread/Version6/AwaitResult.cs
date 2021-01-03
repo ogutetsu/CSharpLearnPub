@@ -8,18 +8,18 @@ namespace LearnProject.Multithread.Version6
 {
     public class AwaitResult : ConsoleMenu
     {
-        System.Threading.Tasks.Task AsyncWithTPL()
+        Task AsyncWithTPL()
         {
             Task<string> t = GetInfoAsync("Task 1");
-            System.Threading.Tasks.Task t2 = t.ContinueWith(task => Console.WriteLine(t.Result),
+            Task t2 = t.ContinueWith(task => Console.WriteLine(t.Result),
                 TaskContinuationOptions.NotOnFaulted);
-            System.Threading.Tasks.Task t3 = t.ContinueWith(task => Console.WriteLine(t.Exception.InnerException),
+            var t3 = t.ContinueWith(task => Console.WriteLine(t.Exception.InnerException),
                 TaskContinuationOptions.OnlyOnFaulted);
-            return System.Threading.Tasks.Task.WhenAny(t2, t3);
+            return Task.WhenAny(t2, t3);
 
         }
 
-        async System.Threading.Tasks.Task AsyncWithAwait()
+        async Task AsyncWithAwait()
         {
             try
             {
@@ -34,14 +34,14 @@ namespace LearnProject.Multithread.Version6
 
         async Task<string> GetInfoAsync(string name)
         {
-            await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(2));
             return
                 $"Task {name} thread id {Thread.CurrentThread.ManagedThreadId} thread pool {Thread.CurrentThread.IsThreadPoolThread}";
         }
         
         public override void Run()
         {
-            System.Threading.Tasks.Task t = AsyncWithTPL();
+            Task t = AsyncWithTPL();
             t.Wait();
 
             t = AsyncWithAwait();

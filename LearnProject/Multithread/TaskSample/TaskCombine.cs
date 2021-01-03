@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using LearnLib;
 
-namespace LearnProject.Multithread.Task
+namespace LearnProject.Multithread.TaskSample
 {
 	public class TaskCombine : ConsoleMenu
 	{
@@ -26,7 +25,7 @@ namespace LearnProject.Multithread.Task
 			
 			Thread.Sleep(TimeSpan.FromSeconds(4));
 
-			System.Threading.Tasks.Task continuation = task2.ContinueWith(
+			var continuation = task2.ContinueWith(
 				t => Console.WriteLine($"Task 2 {t.Result} thread id {Thread.CurrentThread.ManagedThreadId} thread pool {Thread.CurrentThread.IsThreadPoolThread}"),
 				TaskContinuationOptions.OnlyOnRanToCompletion | TaskContinuationOptions.ExecuteSynchronously
 				);

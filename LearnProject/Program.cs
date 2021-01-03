@@ -5,7 +5,7 @@ using LearnProject.Multithread;
 using LearnProject.Multithread.Collection;
 using LearnProject.Multithread.PLINQ;
 using LearnProject.Multithread.Pool;
-using LearnProject.Multithread.Task;
+using LearnProject.Multithread.TaskSample;
 using LearnProject.Multithread.Version6;
 
 namespace LearnProject

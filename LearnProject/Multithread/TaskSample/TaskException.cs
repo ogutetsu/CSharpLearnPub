@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using LearnLib;
 
-namespace LearnProject.Multithread.Task
+namespace LearnProject.Multithread.TaskSample
 {
     public class TaskException : ConsoleMenu
     {
@@ -22,7 +22,7 @@ namespace LearnProject.Multithread.Task
             Task<int> task;
             try
             {
-                task = System.Threading.Tasks.Task.Run(() => TaskMethod("Task 1", 2));
+                task = Task.Run(() => TaskMethod("Task 1", 2));
                 int result = task.Result;
                 Console.WriteLine($"Result : {result}");
             }
@@ -35,7 +35,7 @@ namespace LearnProject.Multithread.Task
 
             try
             {
-                task = System.Threading.Tasks.Task.Run(() => TaskMethod("Task 2", 2));
+                task = Task.Run(() => TaskMethod("Task 2", 2));
                 int result = task.GetAwaiter().GetResult();
                 Console.WriteLine($"Result: {result}");
             }

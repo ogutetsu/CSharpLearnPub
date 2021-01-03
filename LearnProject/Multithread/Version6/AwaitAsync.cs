@@ -7,9 +7,9 @@ namespace LearnProject.Multithread.Version6
 {
 	public class AwaitAsync : ConsoleMenu
 	{
-		System.Threading.Tasks.Task AsyncWithTPL()
+		Task AsyncWithTPL()
 		{
-			var containerTask = new System.Threading.Tasks.Task(() =>
+			var containerTask = new Task(() =>
 				{
 					Task<string> t = GetInfoAsync("TPL 1");
 					t.ContinueWith(task =>
@@ -32,7 +32,7 @@ namespace LearnProject.Multithread.Version6
 			return containerTask;
 		}
 
-		async System.Threading.Tasks.Task AsyncWithAwait()
+		async Task AsyncWithAwait()
 		{
 			try
 			{
@@ -51,14 +51,14 @@ namespace LearnProject.Multithread.Version6
 		async Task<string> GetInfoAsync(string name)
 		{
 			Console.WriteLine($"Task {name} start");
-			await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(2));
+			await Task.Delay(TimeSpan.FromSeconds(2));
 			if(name == "TPL 2") throw new Exception("Boom");
 			return $"Task {name} thread id {Thread.CurrentThread.ManagedThreadId} thread pool {Thread.CurrentThread.IsThreadPoolThread}";
 		}
 		
 		public override void Run()
 		{
-			System.Threading.Tasks.Task t = AsyncWithTPL();
+			Task t = AsyncWithTPL();
 			t.Wait();
 			t = AsyncWithAwait();
 			t.Wait();

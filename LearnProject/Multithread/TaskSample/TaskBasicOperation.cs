@@ -1,10 +1,9 @@
 using System;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using LearnLib;
 
-namespace LearnProject.Multithread.Task
+namespace LearnProject.Multithread.TaskSample
 {
     public class TaskBasicOperation : ConsoleMenu
     {

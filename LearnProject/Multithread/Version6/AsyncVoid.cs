@@ -8,7 +8,7 @@ namespace LearnProject.Multithread.Version6
 	public class AsyncVoid : ConsoleMenu
 	{
 
-		async System.Threading.Tasks.Task AsyncTaskWithErrors()
+		async Task AsyncTaskWithErrors()
 		{
 			string result = await GetInfoAsync("TaskException", 2);
 			Console.WriteLine(result);
@@ -20,7 +20,7 @@ namespace LearnProject.Multithread.Version6
 			Console.WriteLine(result);
 		}
 
-		async System.Threading.Tasks.Task AsyncTask()
+		async Task AsyncTask()
 		{
 			string result = await GetInfoAsync("Task", 2);
 			Console.WriteLine(result);
@@ -34,7 +34,7 @@ namespace LearnProject.Multithread.Version6
 
 		async Task<string> GetInfoAsync(string name, int seconds)
 		{
-			await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(seconds));
+			await Task.Delay(TimeSpan.FromSeconds(seconds));
 			if (name.Contains("Exception"))
 			{
 				throw new Exception($"{name} !");
@@ -44,7 +44,7 @@ namespace LearnProject.Multithread.Version6
 		}
 		public override void Run()
 		{
-			System.Threading.Tasks.Task t = AsyncTask();
+			Task t = AsyncTask();
 			t.Wait();
 			
 			AsyncVoidFunc();
@@ -71,7 +71,7 @@ namespace LearnProject.Multithread.Version6
 			int[] numbers = {1, 2, 3, 4, 5};
 			Array.ForEach(numbers, async number =>
 			{
-				await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
+				await Task.Delay(TimeSpan.FromSeconds(1));
 				if(number == 3) throw new Exception($"Exception !!!");
 				Console.WriteLine(number);
 			});

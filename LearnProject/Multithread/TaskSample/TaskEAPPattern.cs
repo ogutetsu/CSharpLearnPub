@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using LearnLib;
 
-namespace LearnProject.Multithread.Task
+namespace LearnProject.Multithread.TaskSample
 {
     public class TaskEAPPattern : ConsoleMenu
     {

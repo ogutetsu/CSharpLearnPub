@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using LearnLib;
 
-namespace LearnProject.Multithread.Task
+namespace LearnProject.Multithread.TaskSample
 {
     public class TaskParallel : ConsoleMenu
     {
@@ -19,7 +19,7 @@ namespace LearnProject.Multithread.Task
         {
             var task1 = new Task<int>(() => TaskMethod("Task 1", 3));
             var task2 = new Task<int>(() => TaskMethod("Task 2", 2));
-            var whenAllTask = System.Threading.Tasks.Task.WhenAll(task1, task2);
+            var whenAllTask = Task.WhenAll(task1, task2);
 
             whenAllTask.ContinueWith(t =>
                     Console.WriteLine($"1st result {t.Result[0]}  2nd result {t.Result[1]}"),
@@ -42,7 +42,7 @@ namespace LearnProject.Multithread.Task
 
             while (tasks.Count > 0)
             {
-                var compTask = System.Threading.Tasks.Task.WhenAny(tasks).Result;
+                var compTask = Task.WhenAny(tasks).Result;
                 tasks.Remove(compTask);
                 Console.WriteLine($"comp result {compTask.Result}");
             }
