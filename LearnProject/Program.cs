@@ -5,6 +5,7 @@ using LearnProject.Multithread;
 using LearnProject.Multithread.Collection;
 using LearnProject.Multithread.PLINQ;
 using LearnProject.Multithread.Pool;
+using LearnProject.Multithread.ReactiveExtensions;
 using LearnProject.Multithread.TaskSample;
 using LearnProject.Multithread.Version6;
 
@@ -89,6 +90,7 @@ namespace LearnProject
             multithread.AddMenu(49, new ExceptionsPLINQ());
             multithread.AddMenu(50, new DataPartitioningPLINQ());
             multithread.AddMenu(51, new CustomAggregatorPLINQ());
+            multithread.AddMenu(52, new AsyncObservable());
 
             multithread.SetBack();
 
