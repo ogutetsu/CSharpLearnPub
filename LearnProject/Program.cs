@@ -91,6 +91,7 @@ namespace LearnProject
             multithread.AddMenu(50, new DataPartitioningPLINQ());
             multithread.AddMenu(51, new CustomAggregatorPLINQ());
             multithread.AddMenu(52, new AsyncObservable());
+            multithread.AddMenu(53, new CustomObservable());
 
             multithread.SetBack();
 
