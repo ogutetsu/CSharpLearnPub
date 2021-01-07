@@ -94,6 +94,7 @@ namespace LearnProject
             multithread.AddMenu(53, new CustomObservable());
             multithread.AddMenu(54, new SubjectTypeFamily());
             multithread.AddMenu(55, new ObservableObject());
+            multithread.AddMenu(56, new LINQQueryObservable());
 
             multithread.SetBack();
 
