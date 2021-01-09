@@ -98,6 +98,7 @@ namespace LearnProject
             multithread.AddMenu(56, new LINQQueryObservable());
             multithread.AddMenu(57, new AsyncRx());
             multithread.AddMenu(58, new FileAsync());
+            multithread.AddMenu(59, new AsyncHTTP());
             multithread.SetBack();
 
             
