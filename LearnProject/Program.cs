@@ -99,6 +99,8 @@ namespace LearnProject
             multithread.AddMenu(57, new AsyncRx());
             multithread.AddMenu(58, new FileAsync());
             multithread.AddMenu(59, new AsyncHTTP());
+            multithread.AddMenu(60, new AsyncDataBase());
+
             multithread.SetBack();
 
             
