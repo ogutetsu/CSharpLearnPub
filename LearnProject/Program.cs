@@ -2,6 +2,7 @@
 using LearnLib;
 using LearnProject.Beginning;
 using LearnProject.Multithread;
+using LearnProject.Multithread.AsyncIO;
 using LearnProject.Multithread.Collection;
 using LearnProject.Multithread.PLINQ;
 using LearnProject.Multithread.Pool;
@@ -96,7 +97,7 @@ namespace LearnProject
             multithread.AddMenu(55, new ObservableObject());
             multithread.AddMenu(56, new LINQQueryObservable());
             multithread.AddMenu(57, new AsyncRx());
-
+            multithread.AddMenu(58, new FileAsync());
             multithread.SetBack();
 
             
