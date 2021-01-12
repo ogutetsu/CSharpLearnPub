@@ -4,6 +4,7 @@ using LearnProject.Beginning;
 using LearnProject.Multithread;
 using LearnProject.Multithread.AsyncIO;
 using LearnProject.Multithread.Collection;
+using LearnProject.Multithread.ParallelPatterns;
 using LearnProject.Multithread.PLINQ;
 using LearnProject.Multithread.Pool;
 using LearnProject.Multithread.ReactiveExtensions;
@@ -100,6 +101,7 @@ namespace LearnProject
             multithread.AddMenu(58, new FileAsync());
             multithread.AddMenu(59, new AsyncHTTP());
             multithread.AddMenu(60, new AsyncDataBase());
+            multithread.AddMenu(61, new LazyEvaluated());
 
             multithread.SetBack();
 
